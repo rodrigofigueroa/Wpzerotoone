@@ -18,12 +18,16 @@ function load_javascript(){
 
 add_action('wp_enqueue_scripts', 'load_javascript');
 
-// add menus
-
+// add support
 add_theme_support('menus');
+add_theme_support('post-thumbnails');
 
 register_nav_menus(
     array(
         'top-menu' => 'Top menu'
     )
 );
+
+// add maximun size
+
+add_image_size('post_image', 1100, 750, true);
