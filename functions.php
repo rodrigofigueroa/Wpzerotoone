@@ -31,3 +31,37 @@ register_nav_menus(
 // add maximun size
 
 add_image_size('post_image', 1100, 750, true);
+
+
+// add page sidebar
+
+register_sidebar(
+
+        array(
+            'name' => 'Page Sidebar',
+            'id' => 'page-sidebar',
+            'class' => '',
+            'before_title' => '<h4>',
+            'after_title'  => '</h4>'
+        )
+    );
+
+    register_sidebar(
+
+        array(
+            'name' => 'Blog Sidebar',
+            'id' => 'blog-sidebar',
+            'class' => '',
+            'before_title' => '<h4>',
+            'after_title'  => '</h4>'
+        )
+    );
+
+
+    // woocomerce
+
+    function mytheme_add_woocommerce_support() {
+        add_theme_support( 'woocommerce' );
+    }
+    
+    add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
