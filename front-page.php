@@ -1,8 +1,10 @@
 <?php get_header();?>
 
-<div id="hero" class="hero">
+<div id="hero" class="hero d-flex justify-content-center align-items-center">
     <div class="container">
         <h2>Welcome to my Shop</h2>
+        <p>Encuentra lo que necesitas</p>
+        <a href="" class="btn-primary-theme">¡Compra!</a>
     </div>
 </div>
 
