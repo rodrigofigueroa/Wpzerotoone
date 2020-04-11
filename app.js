@@ -115,8 +115,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Programas\xamp\htdocs\woocomerce\wp-content\themes\woocomercetheme\src\app.js */"./src/app.js");
-module.exports = __webpack_require__(/*! D:\Programas\xamp\htdocs\woocomerce\wp-content\themes\woocomercetheme\src\app.sass */"./src/app.sass");
+__webpack_require__(/*! D:\Programas\xamp\htdocs\a\wp-content\themes\woocomercetheme\src\app.js */"./src/app.js");
+module.exports = __webpack_require__(/*! D:\Programas\xamp\htdocs\a\wp-content\themes\woocomercetheme\src\app.sass */"./src/app.sass");
 
 
 /***/ })
