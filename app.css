@@ -94,9 +94,23 @@ header .container .row div .menu-carrito i {
   width: 100%;
   height: 200px;
 }
+.content .container .row .col-12 .home-cat .woocommerce .products {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.content .container .row .col-12 .home-cat .woocommerce .products .product-category.product.first {
+  max-width: 500px;
+  width: 100%;
+}
+.content .container .row .col-12 .home-cat .woocommerce .products .product-category:nth-child(even) {
+  width: 100%;
+  max-width: 370px;
+}
 .content .container .row .col-12 .home-cat .woocommerce .products .product-category {
-  width: 300px;
   position: relative;
+  margin: 0;
 }
 .content .container .row .col-12 .home-cat .woocommerce .products .product-category a:after {
   content: "";
@@ -109,6 +123,12 @@ header .container .row div .menu-carrito i {
   background: #000;
   z-index: 0;
 }
+.content .container .row .col-12 .home-cat .woocommerce .products .product-category a:hover h2 {
+  font-size: 35px;
+}
+.content .container .row .col-12 .home-cat .woocommerce .products .product-category a img {
+  margin-bottom: 0;
+}
 .content .container .row .col-12 .home-cat .woocommerce .products .product-category a h2 {
   position: absolute;
   top: 50%;
@@ -117,6 +137,12 @@ header .container .row div .menu-carrito i {
   color: #fff;
   font-size: 20px;
   z-index: 3;
+  transition: 1s all ease;
+  width: 100%;
+  text-align: center;
+}
+.content .container .row .col-12 .home-cat .woocommerce .products .product-category a h2 mark {
+  display: none;
 }
 
 footer {

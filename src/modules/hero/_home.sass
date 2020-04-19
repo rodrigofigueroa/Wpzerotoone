@@ -1,9 +1,20 @@
 .home-cat
     .woocommerce
         .products
+            display: flex
+            align-items: center
+            justify-content: space-between
+            flex-wrap: wrap
+            .product-category.product.first
+                max-width: 500px
+                width: 100%
             .product-category
-                width: 300px
+                &:nth-child(even)                    
+                    width: 100%
+                    max-width: 370px
+            .product-category
                 position: relative
+                margin: 0
                 a
                     &:after
                         content: ''
@@ -15,6 +26,11 @@
                         opacity: 0.4
                         background: $b
                         z-index: 0
+                    &:hover
+                        h2
+                            font-size: 35px
+                    img
+                        margin-bottom: 0
                     h2
                         position: absolute
                         top: 50%
@@ -23,3 +39,8 @@
                         color: $w
                         font-size: 20px
                         z-index: 3
+                        transition: 1s all ease
+                        width: 100%
+                        text-align: center
+                        mark
+                            display: none
