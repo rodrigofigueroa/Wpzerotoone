@@ -1,3 +1,14 @@
+.shadow
+    display: none
+    width: 100%
+    position: fixed
+    top: 0
+    left: 0
+    height: 100%
+    opacity: 0.6
+    background: $b
+    transition: 1s all ease
+    z-index: 1
 header
     width: 100%
     background: #f2f2f2
@@ -9,12 +20,18 @@ header
                 a
                     img
                         max-width: 120px
+                .fa-bars
+                    display: none
                 .menu
+                    width: 100%
+                    transition: .5s all ease
                     ul
                         list-style-type: none
                         padding: 0
                         margin: 0
                         display: flex
+                        justify-content: space-between
+                        flex-wrap: wrap
                         li
                             margin: 0 12px
                             a                                    
@@ -26,7 +43,7 @@ header
                                     content: ""
                                     width: 0%
                                     height: 3px
-                                    background: #000
+                                    background: #F2F2F2
                                     bottom: -6px
                                     left: 0
                                     transition: 0.5s all ease
@@ -34,6 +51,27 @@ header
                                     color: $b                                    
                                     &:after
                                         width: 100%
+                                        background: $b
                 .menu-carrito
                     i
                         color: $b
+@media screen and (max-width: 767px)    
+    header .container .row div .menu
+        position: fixed
+        top: 0
+        left: -1000px
+        width: 50%
+        background: #fff
+        height: 100%
+        z-index: 3
+    header .container .row div .menu ul
+        padding: 15px
+        flex-direction: column
+    header .container .row div .menu ul li
+        margin: 15px 0px
+    header .container .row div .fa-bars
+        display: block
+        font-size: 25px
+        margin-right: 20px
+    header .container .row div a img
+        width: 100%
