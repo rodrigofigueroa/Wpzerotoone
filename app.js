@@ -113,7 +113,8 @@ window.addEventListener('load', function () {
   };
 
   bars.addEventListener('click', menuResponsive);
-  shadow.addEventListener('click', menuResponsive); //End
+  shadow.addEventListener('click', menuResponsive); //   
+  //End
 });
 
 /***/ }),

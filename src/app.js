@@ -17,5 +17,7 @@ window.addEventListener('load', () => {
     }
     bars.addEventListener('click', menuResponsive);
     shadow.addEventListener('click', menuResponsive);
+
+    //   
 //End
 });

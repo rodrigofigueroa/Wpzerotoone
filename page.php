@@ -9,15 +9,19 @@
                         <?php the_title();?>
                     </h2>
                 </div>
-                <div class="col-12">        
+            </div>
+            <div class="row">
+                <div class="col-6">        
                     <?php if(have_posts()) : while(have_posts()) : the_post();?>
 
                     <?php the_content();?>
 
                     <?php endwhile; else: endif;?>
                 </div>    
+                <div class="col-6">
+                    <?php get_sidebar();?>
+                </div>
             </div>
-            <?php get_sidebar();?>
         </div>
     <div>
 
