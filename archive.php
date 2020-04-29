@@ -3,7 +3,7 @@
     <div class="content">
         <div class="container">
             <div class="row">
-                <div class="col-12">        
+                <div class="col-12 col-md-8">        
                     <?php if(have_posts()) : while(have_posts()) : the_post();?>
                             <?php if(has_post_thumbnail()):?>
                                 <a href="<?php the_permalink();?>"><img src="<?php the_post_thumbnail_url('post_image');?>" alt="" srcset=""></a>
@@ -31,9 +31,11 @@
                             )
                         ?>
                 </div>    
+                <div class="col-12 col-md-3">
+                    <?php get_sidebar();?>
+                    <?php  dynamic_sidebar('blog-sidebar');?>
+                </div>
             </div>
-            <?php get_sidebar();?>
-            <?php  dynamic_sidebar('blog-sidebar');?>
         </div>
     <div>
 

@@ -318,11 +318,11 @@ footer .container .row div .con-suc a i {
 footer .container .row div .con-suc span {
   margin: 20px 0px;
 }
-footer .container .row div .menu ul {
+footer .container .row div ul.menu {
   list-style-type: none;
   padding: 0;
 }
-footer .container .row div .menu ul li a {
+footer .container .row div ul.menu li a {
   color: #fff;
 }
 footer .container .row div .con-redes h2 {
