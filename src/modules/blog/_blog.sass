@@ -1,0 +1,44 @@
+.bloggy
+    div
+        .row
+            div
+                .text-center
+                    margin: 20px 0px
+                .card-deck
+                    padding: 20px 0px
+                    .card
+                        box-shadow: -1px 4px 13px 0px rgba(0,0,0,0.75)
+                        a
+                            img
+                                position: relative
+                                z-index: 1
+                        .card-body
+                            &:after
+                                content: ''
+                                width: 0%
+                                background: $b
+                                position: absolute
+                                left: 0
+                                top: 0
+                                height: 100%
+                                @include transitionsease(.5s, all, ease)
+                            &:hover
+                                h2
+                                    a
+                                        span
+                                            color: $w
+                                p
+                                    color: $w
+                                &:after
+                                    width: 100%
+                            h2
+                                a
+                                    text-decoration: none
+                                    position: relative
+                                    @include transitionsease(1s, all, ease)
+                                    span
+                                        position: relative
+                                        z-index: 1
+                            p
+                                position: relative
+                                z-index: 1
