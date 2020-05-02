@@ -35,23 +35,7 @@ header
                         li
                             margin: 0 12px
                             a                                    
-                                position: relative
-                                text-decoration: none
-                                font-weight: 600
-                                &:after
-                                    position: absolute
-                                    content: ""
-                                    width: 0%
-                                    height: 3px
-                                    background: #F2F2F2
-                                    bottom: -6px
-                                    left: 0
-                                    transition: 0.5s all ease
-                                &:hover
-                                    color: $b                                    
-                                    &:after
-                                        width: 100%
-                                        background: $b
+                                @include hoverCool()
                 .menu-carrito
                     i
                         color: $b

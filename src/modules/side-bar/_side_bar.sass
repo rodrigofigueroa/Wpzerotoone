@@ -1,6 +1,9 @@
 .side-bar-container    
     list-style-type: none
     .widget_search
+        padding-top: 20px
+        display: flex
+        justify-content: center
         form
             div
                 input[type="submit"]
@@ -19,7 +22,7 @@
         padding: 15px 20px
         margin: 20px 0px
         box-shadow: 0px 0px 10px rgba(0,0,0,0.25)
-        background: $b
+        background: $b        
         h4
             color: $w
         ul
@@ -29,4 +32,7 @@
             li
                 a
                     color: $w
+@media screen and (max-width: 767px)
+    .side-bar-container .widget_recent_entries, .side-bar-container .widget_categories
+        text-align: center
 

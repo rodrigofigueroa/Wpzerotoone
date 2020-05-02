@@ -3,10 +3,10 @@
     <div class="bloggy">
         <div class="container-fluid">
             <div class="row d-flex justify-content-center">
-                <div class="col-12">     
+                <div class="col-12 order-0">     
                     <h2 class="text-center">Blog<h2>
                 </div>
-                <div class="col-12 col-md-7">     
+                <div class="col-12 col-md-7 order-2 order-md-1">     
                     <div class="card-deck">
 
                     <?php if(have_posts()) : while(have_posts()) : the_post();?>
@@ -46,7 +46,7 @@
                             ?>             
                     </div>                       
                 </div>    
-                <div class="col-12 col-md-3">
+                <div class="col-12 col-md-3 order-1 order-md-2">
                     <section class="side-bar-container sticky-top">                    
                         <?php get_sidebar();?>
                     </section>
