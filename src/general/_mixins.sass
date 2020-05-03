@@ -18,3 +18,30 @@
         &:after
             width: 100%
             background: $b
+@mixin buttonHover($width, $first, $Second, $padding, $mt, $borderR, $transition)
+    display: block
+    width: $width
+    padding: $padding
+    margin: $mt
+    background: transparent
+    display: block
+    text-align: center
+    font-size: 20px
+    font-weight: 700
+    border: 1px solid $first
+    border-radius: $borderR
+    color: $first
+    transition: $transition
+    text-decoration: none
+    &:hover
+        background: $first
+        color: $Second
+        // border: px solid $Second
+@mixin completeSearch()
+    width: 100%
+    form
+        width: 80%
+        div
+            display: flex
+            input[type="text"]
+                width: 100%

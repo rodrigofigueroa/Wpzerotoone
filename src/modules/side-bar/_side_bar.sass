@@ -32,7 +32,15 @@
             li
                 a
                     color: $w
+.complete-search
+    .widget_search
+        @include completeSearch()
+    .widget_recent_entries, .widget_categories
+        text-align: center
 @media screen and (max-width: 767px)
     .side-bar-container .widget_recent_entries, .side-bar-container .widget_categories
         text-align: center
+    .side-bar-container
+        @include completeSearch()
+    
 

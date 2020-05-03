@@ -25,10 +25,19 @@
                                 )
                                 ?>
                 </div>
-                <div class="col-5 col-md-1 d-flex justify-content-end justify-content-md-center ">
+                <div class="col-5 col-md-2 d-flex justify-content-end justify-content-md-center ">
                     <i class="fas fa-bars"></i>              
-                    <div class="menu-carrito">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="menu-carrito">                 
+                        <i class="fas fa-shopping-cart"></i>                   
+                        <a class="cart-customlocation" 
+                            href="
+                                <?php echo wc_get_cart_url(); ?>"
+                            title="
+                                <?php _e( 'View your shopping cart' ); ?>">
+                                <?php echo sprintf ( _n( '%d item', '%d items', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?> - <?php echo WC()->cart->get_cart_total(); ?>
+                        </a>
+
+
                     </div>                    
                 </div>
             </div>
