@@ -605,3 +605,9 @@ footer .container .row div form .form-btn button {
   background: #000;
   color: #fff;
 }
+
+.carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

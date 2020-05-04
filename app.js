@@ -93,7 +93,20 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-//start the web site
+var changeBootstrap = function changeBootstrap() {
+  var form = document.querySelector('#customer_details').children,
+      kids = form[0].getElementsByClassName('woocommerce-billing-fields__field-wrapper')[0].children;
+  console.log(kids.length);
+
+  for (var a = 0; a < kids.length; a++) {
+    kids[a].classList.add('form-group');
+    var input = kids[a].children;
+    console.log(input[1].getElementsByTagName('input')); // if(){
+    // }
+  }
+}; //start the web site
+
+
 window.addEventListener('load', function () {
   var bars = document.querySelector('.fa-bars');
   var shadow = document.querySelector('.shadow');
@@ -113,8 +126,13 @@ window.addEventListener('load', function () {
   };
 
   bars.addEventListener('click', menuResponsive);
-  shadow.addEventListener('click', menuResponsive); //   
+  shadow.addEventListener('click', menuResponsive);
+
+  if (document.querySelector('#customer_details')) {
+    changeBootstrap();
+  } //   
   //End
+
 });
 
 /***/ }),
