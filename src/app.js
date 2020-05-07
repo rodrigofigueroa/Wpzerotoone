@@ -5,10 +5,16 @@ const changeBootstrap = () => {
         for(let a = 0; a < kids.length; a++){
             kids[a].classList.add('form-group')
             let input = kids[a].children;
-            console.log(input[1].getElementsByTagName('input'))
-            // if(){
-                
-            // }
+            //console.log(input[1].getElementsByTagName('input')[0].getAttribute('type'))
+            if(input[1].getElementsByTagName('input')[0] !== undefined){
+                if(
+                    input[1].getElementsByTagName('input')[0].getAttribute('type') === 'text' ||
+                    input[1].getElementsByTagName('input')[0].getAttribute('type') === 'tel'  ||
+                    input[1].getElementsByTagName('input')[0].getAttribute('type') === 'email'){
+                    input[1].getElementsByTagName('input')[0].classList.add('form-control');
+                    console.log(input[1].getElementsByTagName('input')[0])
+                }
+            }
         }
         
 }

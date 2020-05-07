@@ -32,6 +32,7 @@ header
                         display: flex
                         justify-content: space-between
                         flex-wrap: wrap
+                        transition: 1s all ease
                         li
                             margin: 0 12px
                             a                                    
@@ -42,19 +43,20 @@ header
                     i
                         color: $b
 @media screen and (max-width: 767px)    
-    header .container .row div .menu
+    header .container .row div .menu-menu-1-container ul.menu
         position: fixed
         top: 0
         left: -1000px
         width: 50%
         background: #fff
         height: 100%
-        z-index: 3
-    header .container .row div .menu ul
-        padding: 15px
+        z-index: 4
+        justify-content: center
+    header .container .row div .menu 
+        padding: 5px
         flex-direction: column
-    header .container .row div .menu ul li
-        margin: 15px 0px
+    header .container .row div .menu li
+        margin: 10px 0px
     header .container .row div .fa-bars
         display: block
         font-size: 25px

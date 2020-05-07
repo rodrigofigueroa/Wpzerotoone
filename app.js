@@ -100,9 +100,14 @@ var changeBootstrap = function changeBootstrap() {
 
   for (var a = 0; a < kids.length; a++) {
     kids[a].classList.add('form-group');
-    var input = kids[a].children;
-    console.log(input[1].getElementsByTagName('input')); // if(){
-    // }
+    var input = kids[a].children; //console.log(input[1].getElementsByTagName('input')[0].getAttribute('type'))
+
+    if (input[1].getElementsByTagName('input')[0] !== undefined) {
+      if (input[1].getElementsByTagName('input')[0].getAttribute('type') === 'text' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'tel' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'email') {
+        input[1].getElementsByTagName('input')[0].classList.add('form-control');
+        console.log(input[1].getElementsByTagName('input')[0]);
+      }
+    }
   }
 }; //start the web site
 

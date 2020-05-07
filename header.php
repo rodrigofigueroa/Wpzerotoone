@@ -11,7 +11,7 @@
     <header>
         <div class="container">
             <div class="row d-flex justify-content-between align-items-center">
-                <div class="col-5 col-md-2">
+                <div class="col-4 col-md-2">
                     <a href="<?php bloginfo('url');?>">
                         <img src="<?php bloginfo('template_directory');?>/images/logo.png"/>
                     </a>                    
@@ -25,7 +25,7 @@
                                 )
                                 ?>
                 </div>
-                <div class="col-5 col-md-2 d-flex justify-content-end justify-content-md-center ">
+                <div class="col-7 col-md-2 d-flex justify-content-end justify-content-md-center ">
                     <i class="fas fa-bars"></i>              
                     <div class="menu-carrito">                 
                         <i class="fas fa-shopping-cart"></i>                   
