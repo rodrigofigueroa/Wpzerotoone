@@ -93,22 +93,60 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(n); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
 var changeBootstrap = function changeBootstrap() {
   var form = document.querySelector('#customer_details').children,
-      kids = form[0].getElementsByClassName('woocommerce-billing-fields__field-wrapper')[0].children;
-  console.log(kids.length);
+      kids = form[0].getElementsByClassName('woocommerce-billing-fields__field-wrapper')[0].children,
+      adittionalFields = document.querySelector('.shipping_address').firstElementChild.children,
+      aditionTextArea = document.querySelector('.woocommerce-additional-fields__field-wrapper').firstElementChild,
+      concatKidsAFields = [].concat(_toConsumableArray(adittionalFields), _toConsumableArray(kids));
+  aditionTextArea.classList.add('form-group');
+  aditionTextArea.children[1].firstElementChild.classList.add('form-control');
 
-  for (var a = 0; a < kids.length; a++) {
-    kids[a].classList.add('form-group');
-    var input = kids[a].children; //console.log(input[1].getElementsByTagName('input')[0].getAttribute('type'))
+  for (var a = 0; a < concatKidsAFields.length - 1; a++) {
+    concatKidsAFields[a].classList.add('form-group');
+    var input = concatKidsAFields[a].children;
 
-    if (input[1].getElementsByTagName('input')[0] !== undefined) {
-      if (input[1].getElementsByTagName('input')[0].getAttribute('type') === 'text' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'tel' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'email') {
-        input[1].getElementsByTagName('input')[0].classList.add('form-control');
-        console.log(input[1].getElementsByTagName('input')[0]);
+    if (input[1].getElementsByTagName('input')[0]) {
+      if (input[1].getElementsByTagName('input')[0] !== undefined) {
+        if (input[1].getElementsByTagName('input')[0].getAttribute('type') === 'text' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'tel' || input[1].getElementsByTagName('input')[0].getAttribute('type') === 'email') {
+          input[1].getElementsByTagName('input')[0].classList.add('form-control');
+        }
       }
     }
   }
+};
+
+var loginFunction = function loginFunction() {
+  var form = document.querySelector('.login'),
+      formChildren = form.children;
+
+  for (var a = 0; a < formChildren.length - 1; a++) {
+    // console.log(formChildren[a])
+    formChildren[a].classList.add('form-group');
+    var input = formChildren[a].getElementsByTagName('input');
+
+    if (input[0].getAttribute('type') === 'text' || input[0].getAttribute('id') === 'password') {
+      input[0].classList.add('form-control');
+    }
+  }
+};
+
+var ResetPassword = function ResetPassword() {
+  var input = document.querySelector('.woocommerce-form-row');
+  input.classList.add('form-group');
+  input.children[1].classList.add('form-control');
 }; //start the web site
 
 
@@ -135,6 +173,14 @@ window.addEventListener('load', function () {
 
   if (document.querySelector('#customer_details')) {
     changeBootstrap();
+  }
+
+  if (document.querySelector('.login')) {
+    loginFunction();
+  }
+
+  if (document.querySelector('.lost_reset_password')) {
+    ResetPassword();
   } //   
   //End
 

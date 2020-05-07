@@ -17,8 +17,53 @@
                                             flex-direction: column
                                             width: 40%
                                 .woocommerce-shipping-fields
-                                    //
+                                    #ship-to-different-address
+                                        cursor: pointer
+                                        label
+                                            input[type="checkbox"]
+                                                width: 20px
+                                            span
+                                                @include hoverCool()
+                                    .shipping_address
+                                        .woocommerce-shipping-fields__field-wrapper
+                                            display: flex
+                                            flex-wrap: wrap
+                                            justify-content: space-around
+                                            p
+                                                display: flex
+                                                justify-content: flex-end
+                                                flex-direction: column
+                                                width: 40%
+                                .woocommerce-additional-fields
+                                    .woocommerce-additional-fields__field-wrapper
+                                        display: flex
+                                        flex-wrap: wrap
+                                        justify-content: space-around
+                                        p
+                                            display: flex
+                                            justify-content: flex-end
+                                            flex-direction: column
+                                            width: 100%
+                    .woocommerce-form.woocommerce-form-login.login
+                        display: flex
+                        flex-wrap: wrap
+                        justify-content: space-around
+                        p
+                            display: flex
+                            justify-content: flex-end
+                            flex-direction: column
+                            width: 100%
+                    .woocommerce-ResetPassword
+                        padding: 30px 0px
+                        display: flex
+                        justify-content: center
+                        flex-direction: column
+                        align-items: center
+
+                    
+#add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img
+    width: 20%
 @media screen and (max-width: 767px)
-    .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p
+    .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p, .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-shipping-fields .shipping_address .woocommerce-shipping-fields__field-wrapper p
         width: 100%
                                             

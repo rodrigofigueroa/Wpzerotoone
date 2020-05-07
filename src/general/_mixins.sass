@@ -4,6 +4,7 @@
     position: relative
     text-decoration: none
     font-weight: 600
+    cursor: pointer
     &:after
         position: absolute
         content: ""
@@ -45,3 +46,27 @@
             display: flex
             input[type="text"]
                 width: 100%
+@mixin completScreen($bg, $colorAfter, $fixed)
+    background: url($bg) $colorAfter
+    background-repeat: no-repeat
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    background-size: 100%
+    position: relative
+    background-attachment: $fixed
+    background-size: cover
+    &:after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        background: $colorAfter
+        opacity: 0.6
+        z-index: 0
+    article
+        z-index: 1
