@@ -1,0 +1,49 @@
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.1/min/tiny-slider.js"></script>
+<script>
+    var slider = tns({
+    "container": '.cont-clientes',
+    "autoWidth": true,
+    "items": 3.3,
+    "gutter": 10,
+    "mouseDrag": true,
+    "swipeAngle": false,
+    "speed": 400,
+    "controls": false,
+    "nav": false
+  });
+</script>
+<footer>
+  <section class="linea">      
+    <div class="cont-info">        
+      <h2>Informes</h2>
+      <p>Puedes contactarte a los numeros:</p>
+      <p>01-800-1233312</p>
+      <p><a href="www.avini.com">www.avini.com</a></p>
+      <p><a href="mailto:aavila@avini.com">aavila@avini.com</a></p>
+      <p>Consulta aquí nuestro</p>
+      <p>
+        Programa de Cumplimiento, Política de Integridad
+        y Procedimientos para el cumplimiento con leyes anticorrupción.
+      </p>
+    </div>
+    <form action="./send.php" method="post">
+      <h2>Contáctanos</h2>
+      <div class="input-group">
+        <label>Nombre</label>
+        <input type="text" name="" placeholder="Nombre"/>
+      </div>
+      <div class="input-group">
+        <label>Correo Electrónico</label>
+        <input type="email" name="" placeholder="Email"/>
+      </div>
+      <div class="input-group">
+        <label>Mensaje</label>
+        <textarea name="" cols="30" rows="10"></textarea>
+      </div>
+      <div class="input-group">
+        <input type="submit" value="Enviar"/>
+      </div>
+    </form>
+  </section>
+</footer>
