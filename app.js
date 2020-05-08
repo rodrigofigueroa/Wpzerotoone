@@ -147,6 +147,26 @@ var ResetPassword = function ResetPassword() {
   var input = document.querySelector('.woocommerce-form-row');
   input.classList.add('form-group');
   input.children[1].classList.add('form-control');
+};
+
+var EditAccountInputs = function EditAccountInputs() {
+  var form = document.querySelector('.woocommerce-EditAccountForm').getElementsByTagName('p');
+
+  for (var a = 0; a < form.length - 1; a++) {
+    form[a].classList.add('form-group');
+    var input = form[a].children;
+
+    if (input[1]) {
+      if (input[1].getAttribute('type') === 'text' || input[1].getAttribute('type') === 'tel' || input[1].getAttribute('type') === 'email' || input[1].getAttribute('type') === 'password') {
+        input[1].classList.add('form-control');
+      } else {
+        var spanChild = input[1].children;
+        console.log(spanChild);
+        input[1].classList.add('form-group');
+        spanChild[0].classList.add('form-control');
+      }
+    }
+  }
 }; //start the web site
 
 
@@ -181,6 +201,10 @@ window.addEventListener('load', function () {
 
   if (document.querySelector('.lost_reset_password')) {
     ResetPassword();
+  }
+
+  if (document.querySelector('.woocommerce-EditAccountForm')) {
+    EditAccountInputs();
   } //   
   //End
 

@@ -48,6 +48,30 @@ const ResetPassword = () => {
 
 }
 
+const EditAccountInputs = () => {
+    let form = document.querySelector('.woocommerce-EditAccountForm').getElementsByTagName('p');        
+    for(let a = 0; a < form.length - 1; a++){            
+        form[a].classList.add('form-group')
+        let input = form[a].children;
+        if(input[1]){
+            
+                if(
+                    input[1].getAttribute('type') === 'text'  ||
+                    input[1].getAttribute('type') === 'tel'   ||
+                    input[1].getAttribute('type') === 'email' ||
+                    input[1].getAttribute('type') === 'password'
+                    ){
+                    input[1].classList.add('form-control');                        
+                }else{
+                    let spanChild = input[1].children
+                    console.log(spanChild)
+                    input[1].classList.add('form-group')
+                    spanChild[0].classList.add('form-control');                        
+                }
+        }
+    }
+}
+
 //start the web site
 window.addEventListener('load', () => {
     const bars = document.querySelector('.fa-bars');
@@ -76,6 +100,9 @@ window.addEventListener('load', () => {
     }
     if(document.querySelector('.lost_reset_password')){
         ResetPassword()
+    }
+    if(document.querySelector('.woocommerce-EditAccountForm')){
+        EditAccountInputs();
     }
     //   
 //End

@@ -859,6 +859,57 @@ footer .container .row div form .form-btn button {
   flex-direction: column;
   align-items: center;
 }
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-navigation {
+  border: 1px solid #999;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 20px 0px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  background: #000;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-navigation h4 {
+  color: #fff;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-navigation ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-navigation ul li a {
+  color: #fff;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content p {
+  padding: 10px 20px;
+  margin: 0px;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content p a {
+  text-decoration: underline;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content .woocommerce-message.woocommerce-message--info.woocommerce-Message.woocommerce-Message--info.woocommerce-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content .u-columns.woocommerce-Addresses.addresses .woocommerce-Address {
+  width: 100%;
+  max-width: 100%;
+  padding: 20px 0px;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content .u-columns.woocommerce-Addresses.addresses .woocommerce-Address header {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content .u-columns.woocommerce-Addresses.addresses .woocommerce-Address address {
+  text-align: center;
+  margin-top: 5px;
+}
+.carrito .container .row div .woocommerce .woocommerce-MyAccount-content form fieldset p {
+  display: flex;
+  flex-direction: column;
+}
 
 #add_payment_method #payment ul.payment_methods li img, .woocommerce-cart #payment ul.payment_methods li img, .woocommerce-checkout #payment ul.payment_methods li img {
   width: 20%;
@@ -866,6 +917,22 @@ footer .container .row div form .form-btn button {
 
 @media screen and (max-width: 767px) {
   .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper p, .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-shipping-fields .shipping_address .woocommerce-shipping-fields__field-wrapper p {
+    width: 100%;
+  }
+
+  .carrito .container .row div .woocommerce .woocommerce-MyAccount-navigation {
+    text-align: center;
+  }
+
+  .carrito .container .row div .woocommerce .woocommerce-MyAccount-content .u-columns.woocommerce-Addresses.addresses .woocommerce-Address header {
+    flex-direction: column;
+  }
+
+  .carrito .container .row div .woocommerce .woocommerce-MyAccount-content .u-columns.woocommerce-Addresses.addresses .woocommerce-Address header h3 {
+    font-size: 1.2rem;
+  }
+
+  .carrito .container .row div .woocommerce .woocommerce-MyAccount-content p {
     width: 100%;
   }
 }
