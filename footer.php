@@ -57,7 +57,7 @@
                             <form action="" id="form-contact-footer">
                                 <div class="form-group">
                                     <label for="nombre">Nombre Completo</label>
-                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Fulano ">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Fulano">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Correo Electronico</label>
@@ -65,14 +65,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="numero">Numero de telefono</label>
-                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="5518548798" pattern="^\d{10}$">
+                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="5518548798">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" pattern="/^[\WA-z a-z A-Z]{10,100}$/"></textarea>
                                 </div>     
                                 <div class="form-btn">                                
-                                    <button class="btn btn-primary" disabled="true">Enviar</button>                              
+                                    <button class="btn btn-primary" disabled="true" id="btn-submit-form">Enviar</button>                              
                                 </div>
                             </form>                   
                         </div>

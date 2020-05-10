@@ -188,7 +188,6 @@ var NameForm = function NameForm() {
 var ValidateEmail = function ValidateEmail() {
   var EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   var correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');
-  console.log(EMAIL_REGEX.test(correo.value));
 
   if (!EMAIL_REGEX.test(correo.value)) {
     correo.classList.add('border');
@@ -201,13 +200,50 @@ var ValidateEmail = function ValidateEmail() {
   }
 };
 
-var validate = function validate(e) {
-  e.preventDefault();
+var ValidateNumberForm = function ValidateNumberForm() {
+  var REGEX_NUMBER = /^[0-9]{8,10}$/;
+  var form = document.querySelector('#form-contact-footer'),
+      number = form.querySelector('input[name="numero"]');
 
-  if (NameForm() && ValidateEmail()) {
-    console.log('Cool! we are going to get it well ');
+  if (!REGEX_NUMBER.test(number.value)) {
+    number.classList.add('border');
+    number.classList.add('border-danger');
+    return false;
   } else {
-    console.log('Come on man! you are doing wrong :c');
+    number.classList.remove('border-danger');
+    number.classList.add('border-success');
+    return true;
+  }
+};
+
+var MesaggeArea = function MesaggeArea() {
+  var REGEX_TEXTAREA = /^[\WA-z a-z A-Z]{10,100}$/;
+  textArea = document.querySelector('#exampleFormControlTextarea1');
+  console.log(textArea);
+
+  if (!REGEX_TEXTAREA.test(textArea.value)) {
+    textArea.classList.add('border');
+    textArea.classList.add('border-danger');
+    return false;
+  } else {
+    textArea.classList.remove('border-danger');
+    textArea.classList.add('border-success');
+    return true;
+  }
+};
+
+var validate = function validate(e) {
+  var btn = document.querySelector('#btn-submit-form');
+
+  if (NameForm() && ValidateEmail() && ValidateNumberForm() && MesaggeArea()) {
+    btn.classList.remove('btn-danger');
+    btn.classList.add('btn-success');
+    btn.disabled = false;
+  } else {
+    e.preventDefault();
+    btn.classList.remove('btn-primary');
+    btn.classList.add('btn-danger');
+    btn.disabled = true;
   }
 };
 

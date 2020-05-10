@@ -88,8 +88,7 @@ const NameForm = () => {
 
 const ValidateEmail = () => {
     const EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
-    let         correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');
-    console.log(EMAIL_REGEX.test(correo.value));
+    let         correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');    
     if(!EMAIL_REGEX.test(correo.value)){
         correo.classList.add('border')
         correo.classList.add('border-danger')
@@ -101,15 +100,54 @@ const ValidateEmail = () => {
     }
 }
 
-const validate = (e) => {
-    e.preventDefault()
+const ValidateNumberForm = () => {
+    const REGEX_NUMBER = /^[0-9]{8,10}$/;
+    let form = document.querySelector('#form-contact-footer'),
+        number = form.querySelector('input[name="numero"]');
+        if(!REGEX_NUMBER.test(number.value)){
+            number.classList.add('border')
+            number.classList.add('border-danger')
+            return false
+        }else{
+            number.classList.remove('border-danger')
+            number.classList.add('border-success')    
+            return true
+        }
+}
+
+const MesaggeArea = () => {
+    const REGEX_TEXTAREA = /^[\WA-z a-z A-Z]{10,100}$/
+        textArea = document.querySelector('#exampleFormControlTextarea1');
+    console.log(textArea)
+    if(!REGEX_TEXTAREA.test(textArea.value)){
+        textArea.classList.add('border')
+        textArea.classList.add('border-danger')
+        return false
+    }else{
+        textArea.classList.remove('border-danger')
+        textArea.classList.add('border-success')    
+        return true
+    }
+}
+
+const validate = (e) => {    
+    let btn = document.querySelector('#btn-submit-form');
     if(
         NameForm() &&
-        ValidateEmail()
+        ValidateEmail() &&
+        ValidateNumberForm() &&
+        MesaggeArea()
         ){
-        console.log('Cool! we are going to get it well ')
+        btn.classList.remove('btn-danger')
+        btn.classList.add('btn-success')
+        btn.disabled = false;
+
     }else{
-        console.log('Come on man! you are doing wrong :c')
+        e.preventDefault()
+        btn.classList.remove('btn-primary')
+        btn.classList.add('btn-danger')
+        btn.disabled = true;
+
     }
 }
 
