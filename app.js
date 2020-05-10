@@ -219,7 +219,6 @@ var ValidateNumberForm = function ValidateNumberForm() {
 var MesaggeArea = function MesaggeArea() {
   var REGEX_TEXTAREA = /^[\WA-z a-z A-Z]{10,100}$/;
   textArea = document.querySelector('#exampleFormControlTextarea1');
-  console.log(textArea);
 
   if (!REGEX_TEXTAREA.test(textArea.value)) {
     textArea.classList.add('border');
@@ -234,8 +233,25 @@ var MesaggeArea = function MesaggeArea() {
 
 var validate = function validate(e) {
   var btn = document.querySelector('#btn-submit-form');
+  var flag = true;
 
-  if (NameForm() && ValidateEmail() && ValidateNumberForm() && MesaggeArea()) {
+  if (!NameForm()) {
+    flag = false;
+  }
+
+  if (!ValidateEmail()) {
+    flag = false;
+  }
+
+  if (!ValidateNumberForm()) {
+    flag = false;
+  }
+
+  if (!MesaggeArea()) {
+    flag = false;
+  }
+
+  if (flag) {
     btn.classList.remove('btn-danger');
     btn.classList.add('btn-success');
     btn.disabled = false;
@@ -247,9 +263,31 @@ var validate = function validate(e) {
   }
 };
 
-var AjaxSend = function AjaxSend() {
+var AjaxSend = function AjaxSend(e) {
+  e.preventDefault();
+  var formInputs = document.querySelector('#form-contact-footer').querySelectorAll('input'),
+      formTextArea = document.querySelector('#form-contact-footer').querySelectorAll('textarea');
+
+  var _final = [].concat(_toConsumableArray(formInputs), _toConsumableArray(formTextArea));
+
+  var body = {
+    nombre: '',
+    correo: '',
+    numero: '',
+    mensaje: ''
+  };
+
+  _final.forEach(function (item, i) {
+    body[item.name] = item.value;
+  });
+
+  console.log(body);
+};
+
+var ValidateFormCompetely = function ValidateFormCompetely() {
   var form = document.querySelector('#form-contact-footer');
   form.addEventListener('keyup', validate);
+  form.addEventListener('submit', AjaxSend, false);
 }; //start the web site
 
 
@@ -291,7 +329,7 @@ window.addEventListener('load', function () {
   }
 
   if (document.querySelector('#form-contact-footer')) {
-    AjaxSend();
+    ValidateFormCompetely();
   } //   
   //End
 

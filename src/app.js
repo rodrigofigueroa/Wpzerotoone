@@ -118,7 +118,6 @@ const ValidateNumberForm = () => {
 const MesaggeArea = () => {
     const REGEX_TEXTAREA = /^[\WA-z a-z A-Z]{10,100}$/
         textArea = document.querySelector('#exampleFormControlTextarea1');
-    console.log(textArea)
     if(!REGEX_TEXTAREA.test(textArea.value)){
         textArea.classList.add('border')
         textArea.classList.add('border-danger')
@@ -132,16 +131,24 @@ const MesaggeArea = () => {
 
 const validate = (e) => {    
     let btn = document.querySelector('#btn-submit-form');
-    if(
-        NameForm() &&
-        ValidateEmail() &&
-        ValidateNumberForm() &&
-        MesaggeArea()
-        ){
+    let flag = true
+    if(!NameForm()){
+        flag  = false
+    }
+    if(!ValidateEmail()){
+        flag  = false
+    }
+    if(!ValidateNumberForm()){
+        flag  = false
+    }
+    if(!MesaggeArea()){
+        flag  = false
+    }
+
+    if(flag){
         btn.classList.remove('btn-danger')
         btn.classList.add('btn-success')
         btn.disabled = false;
-
     }else{
         e.preventDefault()
         btn.classList.remove('btn-primary')
@@ -151,10 +158,28 @@ const validate = (e) => {
     }
 }
 
-const AjaxSend = () => {
-    let form = document.querySelector('#form-contact-footer');
-    form.addEventListener('keyup', validate)
+const AjaxSend = (e) => {    
+    e.preventDefault();
+    let formInputs = document.querySelector('#form-contact-footer').querySelectorAll('input'),
+        formTextArea = document.querySelector('#form-contact-footer').querySelectorAll('textarea');
+    let final = [...formInputs, ...formTextArea]
+    let body = {
+        nombre: '',
+        correo: '',
+        numero: '',
+        mensaje: ''
+    };    
+    final.forEach((item,i) => {        
+         body[item.name] = item.value
+    })
+        
+        console.log(body)
+}
 
+const ValidateFormCompetely = () => {
+    let form = document.querySelector('#form-contact-footer');
+        form.addEventListener('keyup', validate);
+        form.addEventListener('submit', AjaxSend, false);
 }
 
 //start the web site
@@ -190,7 +215,7 @@ window.addEventListener('load', () => {
         EditAccountInputs();
     }
     if(document.querySelector('#form-contact-footer')){
-        AjaxSend()
+        ValidateFormCompetely()
     }
     //   
 //End

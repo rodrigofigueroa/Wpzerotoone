@@ -54,7 +54,7 @@
                         </div>
                         <div class="col-md-4">
                             <h2>Contactanos</h2>
-                            <form action="" id="form-contact-footer">
+                            <form action="" method="POST" id="form-contact-footer">
                                 <div class="form-group">
                                     <label for="nombre">Nombre Completo</label>
                                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Fulano">
