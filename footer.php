@@ -54,25 +54,25 @@
                         </div>
                         <div class="col-md-4">
                             <h2>Contactanos</h2>
-                            <form action="">
+                            <form action="" id="form-contact-footer">
                                 <div class="form-group">
                                     <label for="nombre">Nombre Completo</label>
                                     <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Fulano ">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlInput1">Correo Electronico</label>
-                                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="ejemplo@ejemplo.com">
+                                    <input type="email" class="form-control" id="exampleFormControlInput1" name="correo" placeholder="ejemplo@ejemplo.com">
                                 </div>
                                 <div class="form-group">
                                     <label for="numero">Numero de telefono</label>
-                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="5518548798">
+                                    <input type="text" class="form-control" id="numero" name="numero" placeholder="5518548798" pattern="^\d{10}$">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleFormControlTextarea1">Example textarea</label>
-                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje"></textarea>
                                 </div>     
                                 <div class="form-btn">                                
-                                    <button class="btn btn-primary">Enviar</button>                              
+                                    <button class="btn btn-primary" disabled="true">Enviar</button>                              
                                 </div>
                             </form>                   
                         </div>

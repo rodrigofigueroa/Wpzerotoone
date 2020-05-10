@@ -167,6 +167,53 @@ var EditAccountInputs = function EditAccountInputs() {
       }
     }
   }
+}; //Form
+
+
+var NameForm = function NameForm() {
+  var NAME_REGEX = /^[A-z\sa-z\sA-Z]{3,30}$/;
+  var name = document.querySelector('#form-contact-footer').querySelector('input[name="nombre"]');
+
+  if (!NAME_REGEX.test(name.value)) {
+    name.classList.add('border');
+    name.classList.add('border-danger');
+    return false;
+  } else {
+    name.classList.remove('border-danger');
+    name.classList.add('border-success');
+    return true;
+  }
+};
+
+var ValidateEmail = function ValidateEmail() {
+  var EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  var correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');
+  console.log(EMAIL_REGEX.test(correo.value));
+
+  if (!EMAIL_REGEX.test(correo.value)) {
+    correo.classList.add('border');
+    correo.classList.add('border-danger');
+    return false;
+  } else {
+    correo.classList.remove('border-danger');
+    correo.classList.add('border-success');
+    return true;
+  }
+};
+
+var validate = function validate(e) {
+  e.preventDefault();
+
+  if (NameForm() && ValidateEmail()) {
+    console.log('Cool! we are going to get it well ');
+  } else {
+    console.log('Come on man! you are doing wrong :c');
+  }
+};
+
+var AjaxSend = function AjaxSend() {
+  var form = document.querySelector('#form-contact-footer');
+  form.addEventListener('keyup', validate);
 }; //start the web site
 
 
@@ -205,6 +252,10 @@ window.addEventListener('load', function () {
 
   if (document.querySelector('.woocommerce-EditAccountForm')) {
     EditAccountInputs();
+  }
+
+  if (document.querySelector('#form-contact-footer')) {
+    AjaxSend();
   } //   
   //End
 
