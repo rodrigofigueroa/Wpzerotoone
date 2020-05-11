@@ -160,20 +160,14 @@ const validate = (e) => {
 
 const AjaxSend = (e) => {    
     e.preventDefault();
-    let formInputs = document.querySelector('#form-contact-footer').querySelectorAll('input'),
-        formTextArea = document.querySelector('#form-contact-footer').querySelectorAll('textarea');
-    let final = [...formInputs, ...formTextArea]
-    let body = {
-        nombre: '',
-        correo: '',
-        numero: '',
-        mensaje: ''
-    };    
-    final.forEach((item,i) => {        
-         body[item.name] = item.value
-    })
-        
-        console.log(body)
+    let form         = document.querySelector('#form-contact-footer'),
+        formInputs   = form.querySelectorAll('input'),
+        formTextArea = form.querySelectorAll('textarea'),
+        final        = [...formInputs, ...formTextArea],
+        bodyCreate         = { nombre: '', correo: '', numero: '', mensaje: ''};    
+        final.forEach(item => {body[item.name] = item.value});
+    const BODY_AJAX = JSON.stringify(bodyCreate);
+        form.reset();
 }
 
 const ValidateFormCompetely = () => {

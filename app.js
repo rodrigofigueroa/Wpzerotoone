@@ -265,23 +265,24 @@ var validate = function validate(e) {
 
 var AjaxSend = function AjaxSend(e) {
   e.preventDefault();
-  var formInputs = document.querySelector('#form-contact-footer').querySelectorAll('input'),
-      formTextArea = document.querySelector('#form-contact-footer').querySelectorAll('textarea');
 
-  var _final = [].concat(_toConsumableArray(formInputs), _toConsumableArray(formTextArea));
-
-  var body = {
+  var form = document.querySelector('#form-contact-footer'),
+      formInputs = form.querySelectorAll('input'),
+      formTextArea = form.querySelectorAll('textarea'),
+      _final = [].concat(_toConsumableArray(formInputs), _toConsumableArray(formTextArea)),
+      bodyCreate = {
     nombre: '',
     correo: '',
     numero: '',
     mensaje: ''
   };
 
-  _final.forEach(function (item, i) {
+  _final.forEach(function (item) {
     body[item.name] = item.value;
   });
 
-  console.log(body);
+  var BODY_AJAX = JSON.stringify(bodyCreate);
+  form.reset();
 };
 
 var ValidateFormCompetely = function ValidateFormCompetely() {
