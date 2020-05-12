@@ -284,8 +284,8 @@ var AjaxSend = function AjaxSend(e) {
 
   var BODY_AJAX = JSON.stringify(bodyCreate),
       BASE_URL_JS = window.location.origin,
-      url = "".concat(BASE_URL_JS, "/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php"),
-      http = new XMLHttpRequest();
+      url = "".concat(BASE_URL_JS, "/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php");
+  http = new XMLHttpRequest();
   http.open('POST', url, true);
   http.setRequestHeader('Content-Type', 'application-json');
   http.send(BODY_AJAX);

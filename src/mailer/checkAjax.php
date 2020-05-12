@@ -10,10 +10,10 @@
     $decode = json_decode($getData, true);
     var_dump($decode);
     if($decode !== ''){
-        $nombre = $decode[nombre];
-         $email = $decode[correo];
-         $numero = $decode[numero];
-         $mensaje = $decode[mensaje];
+        $nombre = $decode['nombre'];
+         $email = $decode['correo'];
+         $numero = $decode['numero'];
+         $mensaje = $decode['mensaje'];
          if(!empty($nombre)){
             $nombre = trim($nombre);
             $nombre = htmlspecialchars($nombre);
@@ -76,6 +76,4 @@
             }
         }
 
-    }else{
-        echo false
     }

@@ -54,6 +54,7 @@ a.btn-primary-theme {
   color: #fff;
   transition: 0.5s all ease;
   text-decoration: none;
+  cursor: pointer;
 }
 a.btn-primary-theme:hover {
   background: #fff;
@@ -330,6 +331,7 @@ header .container .row div .menu-carrito i {
   color: #000;
   transition: 0.3s all ease;
   text-decoration: none;
+  cursor: pointer;
 }
 .content div .row .one-s h2:hover {
   background: #000;
@@ -433,6 +435,7 @@ header .container .row div .menu-carrito i {
   color: #fff;
   transition: 0.3s all ease;
   text-decoration: none;
+  cursor: pointer;
 }
 .content div .row .three-s article h2:hover {
   background: #fff;
@@ -777,6 +780,7 @@ footer .container .row div .txt-form-alerts {
   color: #000;
   transition: 0.4s all ease;
   text-decoration: none;
+  cursor: pointer;
 }
 .tags-css a:hover {
   background: #000;
@@ -938,5 +942,56 @@ footer .container .row div .txt-form-alerts {
 
   .carrito .container .row div .woocommerce .woocommerce-MyAccount-content p {
     width: 100%;
+  }
+}
+.container .row .col-12 .cont-404 {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container .row .col-12 .cont-404 h2 {
+  font-size: 35px;
+}
+.container .row .col-12 .cont-404 p {
+  font-size: 25px;
+  text-align: center;
+}
+.container .row .col-12 .cont-404 a {
+  display: block;
+  width: 300px;
+  padding: 20px 10px;
+  margin: 20px;
+  background: transparent;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  border: 1px solid #000;
+  border-radius: 0px;
+  color: #000;
+  transition: 0.5s all ease;
+  text-decoration: none;
+  cursor: pointer;
+}
+.container .row .col-12 .cont-404 a:hover {
+  background: #000;
+  color: #fff;
+}
+
+@media screen and (max-width: 400px) {
+  .container .row .col-12 .cont-404 h2 {
+    text-align: center;
+    font-size: 28px;
+  }
+
+  .container .row .col-12 .cont-404 p {
+    font-size: 18px;
+  }
+
+  .container .row .col-12 .cont-404 a {
+    width: 80%;
+    font-size: 16px;
   }
 }

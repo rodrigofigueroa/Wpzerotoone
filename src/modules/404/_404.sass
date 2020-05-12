@@ -1,0 +1,25 @@
+.container
+    .row
+        .col-12
+            .cont-404
+                height: 100vh
+                display: flex
+                flex-direction: column
+                justify-content: center
+                align-items: center
+                h2
+                    font-size: 35px
+                p
+                    font-size: 25px
+                    text-align: center
+                a
+                    @include buttonHover(300px, $b, $w, 20px 10px, 20px, 0px, .5s all ease)
+@media screen and (max-width: 400px)
+    .container .row .col-12 .cont-404 h2
+        text-align: center
+        font-size: 28px
+    .container .row .col-12 .cont-404 p
+        font-size: 18px
+    .container .row .col-12 .cont-404 a
+        width: 80%
+        font-size: 16px

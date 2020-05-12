@@ -169,7 +169,7 @@ const AjaxSend = (e) => {
         final.forEach(item => {bodyCreate[item.name] = item.value});
         const BODY_AJAX = JSON.stringify(bodyCreate),
               BASE_URL_JS = window.location.origin,
-              url  = `${BASE_URL_JS}/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php`,
+              url  = `${BASE_URL_JS}/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php`;
               http = new XMLHttpRequest();
               http.open('POST', url, true);
               http.setRequestHeader('Content-Type', 'application-json');
