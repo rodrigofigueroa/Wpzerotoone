@@ -515,6 +515,10 @@ footer .container .row div form .form-btn button {
   width: 120px;
   margin: 0 auto;
 }
+footer .container .row div .txt-form-alerts {
+  width: 100%;
+  text-align: center;
+}
 
 @media screen and (max-width: 500px) {
   footer .container .row div h2 {

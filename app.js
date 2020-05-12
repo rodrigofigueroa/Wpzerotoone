@@ -275,13 +275,31 @@ var AjaxSend = function AjaxSend(e) {
     correo: '',
     numero: '',
     mensaje: ''
-  };
+  },
+      txt = document.querySelector('.txt-form-alerts').firstElementChild;
 
   _final.forEach(function (item) {
-    body[item.name] = item.value;
+    bodyCreate[item.name] = item.value;
   });
 
-  var BODY_AJAX = JSON.stringify(bodyCreate);
+  var BODY_AJAX = JSON.stringify(bodyCreate),
+      BASE_URL_JS = window.location.origin,
+      url = "".concat(BASE_URL_JS, "/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php"),
+      http = new XMLHttpRequest();
+  http.open('POST', url, true);
+  http.setRequestHeader('Content-Type', 'application-json');
+  http.send(BODY_AJAX);
+
+  http.onreadystatechange = function () {
+    if (http.readyState === 4 && http.status === 200) {
+      txt.innerHTML = '¡Gracias! nos pondremos en contacto contigo pronto.';
+    }
+
+    if (http.readyState === 4 && http.status !== 200) {
+      txt.innerHTML = 'Upps, creo que algo salío mal :c, intenta de nuevo más tarde.';
+    }
+  };
+
   form.reset();
 };
 

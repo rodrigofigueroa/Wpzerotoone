@@ -68,13 +68,16 @@
                                     <input type="text" class="form-control" id="numero" name="numero" placeholder="5518548798">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleFormControlTextarea1">Example textarea</label>
+                                    <label for="exampleFormControlTextarea1">Agrega tus comentarios</label>
                                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="mensaje" pattern="/^[\WA-z a-z A-Z]{10,100}$/"></textarea>
                                 </div>     
                                 <div class="form-btn">                                
                                     <button class="btn btn-primary" disabled="true" id="btn-submit-form">Enviar</button>                              
                                 </div>
-                            </form>                   
+                            </form>  
+                            <div class="txt-form-alerts">
+                                <p>Si quieres más información llena el formulario.</p>
+                            </div>                 
                         </div>
                     </div>
                 </div>

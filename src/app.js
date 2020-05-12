@@ -164,9 +164,24 @@ const AjaxSend = (e) => {
         formInputs   = form.querySelectorAll('input'),
         formTextArea = form.querySelectorAll('textarea'),
         final        = [...formInputs, ...formTextArea],
-        bodyCreate         = { nombre: '', correo: '', numero: '', mensaje: ''};    
-        final.forEach(item => {body[item.name] = item.value});
-    const BODY_AJAX = JSON.stringify(bodyCreate);
+        bodyCreate   = { nombre: '', correo: '', numero: '', mensaje: ''},
+        txt          = document.querySelector('.txt-form-alerts').firstElementChild;  
+        final.forEach(item => {bodyCreate[item.name] = item.value});
+        const BODY_AJAX = JSON.stringify(bodyCreate),
+              BASE_URL_JS = window.location.origin,
+              url  = `${BASE_URL_JS}/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php`,
+              http = new XMLHttpRequest();
+              http.open('POST', url, true);
+              http.setRequestHeader('Content-Type', 'application-json');
+              http.send(BODY_AJAX);
+              http.onreadystatechange = () => {                  
+                    if(http.readyState === 4 && http.status === 200){
+                        txt.innerHTML = '¡Gracias! nos pondremos en contacto contigo pronto.'
+                    }
+                    if(http.readyState === 4 && http.status !== 200){
+                        txt.innerHTML = 'Upps, creo que algo salío mal :c, intenta de nuevo más tarde.'
+                    }
+              }
         form.reset();
 }
 
