@@ -787,7 +787,17 @@ footer .container .row div .txt-form-alerts {
   color: #fff;
 }
 
+.carrito .container .row div .woocommerce form[name=checkout] div#customer_details div {
+  width: 100%;
+}
+.carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields {
+  width: 85vw;
+}
+.carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields h3 {
+  width: 100%;
+}
 .carrito .container .row div .woocommerce form[name=checkout] div#customer_details div .woocommerce-billing-fields .woocommerce-billing-fields__field-wrapper {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;

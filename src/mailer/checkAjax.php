@@ -45,7 +45,7 @@
             // $mensaje_p .= "Correo " . $email . "\n";
             $mensaje_p .= "Numero :" . $numero . "<br>";
             $mensaje_p .= "Mensaje :" . $mensaje . "<br>";
-            
+            echo true;
             try {
                 //Server settings
                 $mail->SMTPDebug = 0;                                       // Enable verbose debug output
@@ -70,7 +70,7 @@
                 $mail->Subject = $asunto . '\n';
                 $mail->Body    = $mensaje_p.'  ' . 'correo: '. $email;
 
-                $mail->send();
+                $mail->send();                
             } catch (Exception $e) {
                 echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
             }

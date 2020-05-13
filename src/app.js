@@ -169,19 +169,23 @@ const AjaxSend = (e) => {
         final.forEach(item => {bodyCreate[item.name] = item.value});
         const BODY_AJAX = JSON.stringify(bodyCreate),
               BASE_URL_JS = window.location.origin,
-              url  = `${BASE_URL_JS}/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php`;
-              http = new XMLHttpRequest();
-              http.open('POST', url, true);
-              http.setRequestHeader('Content-Type', 'application-json');
-              http.send(BODY_AJAX);
-              http.onreadystatechange = () => {                  
-                    if(http.readyState === 4 && http.status === 200){
-                        txt.innerHTML = '¡Gracias! nos pondremos en contacto contigo pronto.'
-                    }
-                    if(http.readyState === 4 && http.status !== 200){
-                        txt.innerHTML = 'Upps, creo que algo salío mal :c, intenta de nuevo más tarde.'
-                    }
-              }
+              url  = `${BASE_URL_JS}/a/wp-content/themes/woocomercetheme/src/mailer/checkAjax.php`;            
+        fetch(url,{
+            method: 'POST',
+            headers: {
+                'Content-type': 'application-json',
+                'Accept': 'applications-json'
+            },
+            body: BODY_AJAX
+        })
+        .then( first => {
+            if(first.ok){
+                txt.innerHTML = '¡Gracias! nos pondremos en contacto contigo pronto.'
+            }else{
+                txt.innerHTML = 'Upps, creo que algo salío mal :c, intenta de nuevo más tarde.'
+            }
+        })
+
         form.reset();
 }
 
@@ -189,6 +193,18 @@ const ValidateFormCompetely = () => {
     let form = document.querySelector('#form-contact-footer');
         form.addEventListener('keyup', validate);
         form.addEventListener('submit', AjaxSend, false);
+}
+
+const RemoveCol = () => {
+    let colsSet = document.querySelector('.col2-set'),
+        col1    = document.querySelector('.col-1'),
+        col2    = document.querySelector('.col-2');
+        JoinCols = [colsSet,col1,col2];
+        JoinCols.forEach(item => {
+            let classCss = item.getAttribute('class');
+                item.classList.remove(classCss)
+        })
+
 }
 
 //start the web site
@@ -213,6 +229,7 @@ window.addEventListener('load', () => {
 
     if(document.querySelector('#customer_details')){
         changeBootstrap()
+        RemoveCol()
     }
     if(document.querySelector('.login')){
         loginFunction();
