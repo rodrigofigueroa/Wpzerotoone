@@ -22,7 +22,7 @@ header
                         max-width: 120px
                 .fa-bars
                     display: none
-                .menu-menu-1-container
+                div
                     width: 100%
                     transition: .5s all ease
                     ul.menu
@@ -30,7 +30,7 @@ header
                         padding: 0
                         margin: 0
                         display: flex
-                        justify-content: space-between
+                        justify-content: center
                         flex-wrap: wrap
                         transition: 1s all ease
                         li
@@ -43,7 +43,7 @@ header
                     i
                         color: $b
 @media screen and (max-width: 767px)    
-    header .container .row div .menu-menu-1-container ul.menu
+    header .container .row div div ul.menu
         position: fixed
         top: 0
         left: -1000px
@@ -63,3 +63,5 @@ header
         margin-right: 20px
     header .container .row div a img
         width: 100%
+    header .container .row div div
+        width: auto

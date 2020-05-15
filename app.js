@@ -185,9 +185,8 @@ var NameForm = function NameForm() {
   }
 };
 
-var ValidateEmail = function ValidateEmail() {
+var ValidateEmail = function ValidateEmail(correo) {
   var EMAIL_REGEX = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-  var correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');
 
   if (!EMAIL_REGEX.test(correo.value)) {
     correo.classList.add('border');
@@ -231,15 +230,16 @@ var MesaggeArea = function MesaggeArea() {
   }
 };
 
-var validate = function validate(e) {
-  var btn = document.querySelector('#btn-submit-form');
-  var flag = true;
+var validate = function validate() {
+  var btn = document.querySelector('#btn-submit-form'),
+      flag = true,
+      correo = document.querySelector('#form-contact-footer').querySelector('input[name="correo"]');
 
   if (!NameForm()) {
     flag = false;
   }
 
-  if (!ValidateEmail()) {
+  if (!ValidateEmail(correo)) {
     flag = false;
   }
 
@@ -256,10 +256,9 @@ var validate = function validate(e) {
     btn.classList.add('btn-success');
     btn.disabled = false;
   } else {
-    e.preventDefault();
+    btn.disabled = true;
     btn.classList.remove('btn-primary');
     btn.classList.add('btn-danger');
-    btn.disabled = true;
   }
 };
 
@@ -317,6 +316,91 @@ var RemoveCol = function RemoveCol() {
     var classCss = item.getAttribute('class');
     item.classList.remove(classCss);
   });
+};
+
+var AddFormControlAndBesUXregister = function AddFormControlAndBesUXregister() {
+  var inputs = Array.from(document.querySelector('.register').querySelectorAll('input')),
+      cols1 = document.querySelector('.col-1'),
+      cols2 = document.querySelector('.col-2'),
+      allCols = [cols1, cols2];
+  allCols.forEach(function (item) {
+    item.parentElement.classList.add('row');
+    item.classList = 'col-12 col-md-6';
+  });
+  inputs.forEach(function (item) {
+    item.parentElement.classList.add('form-group');
+
+    if (item.parentElement.parentElement.tagName === 'P', item.parentElement.parentElement.tagName) {
+      item.parentElement.parentElement.classList.add('d-flex', 'flex-column');
+    }
+
+    if (item.getAttribute('type') === 'text' || item.getAttribute('type') === 'email' || item.getAttribute('type') === 'password') {
+      item.classList.add('form-control');
+    }
+  });
+};
+
+var ValidateUser = function ValidateUser() {
+  var user = document.querySelector('.woocommerce-form-register').querySelector('input[name="username"]'),
+      regexUser = /^[\w]{2,20}$/;
+
+  if (regexUser.test(user.value)) {
+    user.classList.remove('border-danger');
+    user.classList.add('border', 'border-success');
+    return true;
+  } else {
+    user.classList.remove('border-success');
+    user.classList.add('border', 'border-danger');
+  }
+
+  return false;
+};
+
+var ValidatePassword = function ValidatePassword() {
+  var regex = /^[\w\W]{12,30}$/,
+      pass = document.querySelector('.woocommerce-form-register').querySelector('input[name="password"]');
+
+  if (!regex.test(pass.value)) {
+    pass.classList.remove('border-success');
+    pass.classList.add('border', 'border-danger');
+    return false;
+  }
+
+  pass.classList.remove('border-danger');
+  pass.classList.add('border', 'border-success');
+  return true;
+};
+
+var CompleteValidate = function CompleteValidate() {
+  var flag = true,
+      form = document.querySelector('.woocommerce-form-register'),
+      btn = form.querySelector('button[type="submit"]'),
+      correo = form.querySelector('#reg_email');
+
+  if (!ValidateUser()) {
+    flag = false;
+  }
+
+  if (!ValidateEmail(correo)) {
+    flag = false;
+  }
+
+  if (!ValidatePassword()) {
+    flag = false;
+  }
+
+  if (flag) {
+    btn.disabled = false;
+  } else {
+    btn.disabled = true;
+  }
+};
+
+var ValidateForRegister = function ValidateForRegister() {
+  document.querySelector('.woocommerce-form-register').addEventListener('change', CompleteValidate);
+  document.querySelector('.woocommerce-form-register').addEventListener('keyup', CompleteValidate);
+  document.querySelector('.woocommerce-form-register').addEventListener('focusin', CompleteValidate);
+  document.querySelector('.woocommerce-form-register').addEventListener('focusout', CompleteValidate);
 }; //start the web site
 
 
@@ -360,6 +444,13 @@ window.addEventListener('load', function () {
 
   if (document.querySelector('#form-contact-footer')) {
     ValidateFormCompetely();
+  }
+
+  if (document.querySelector('.register')) {
+    btn = document.querySelector('.woocommerce-form-register').querySelector('button[type="submit"]');
+    btn.disabled = true;
+    AddFormControlAndBesUXregister();
+    ValidateForRegister();
   } //   
   //End
 
