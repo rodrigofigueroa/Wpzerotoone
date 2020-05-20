@@ -2,7 +2,7 @@
 
 <div id="hero" class="hero d-flex justify-content-center align-items-center">
     <div class="container">
-        <h2>Bienvenido a Netbite</h2>
+        <h2>Bienvenido a Nettbyte</h2>
         <p>Encuentra lo que necesitas</p>
         <a href="<?php echo get_site_url().'/tienda';?>" class="btn-primary-theme">¡Compra!</a>
     </div>
