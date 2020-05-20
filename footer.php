@@ -10,7 +10,7 @@
                                 <a href="">
                                     <i class="fas fa-phone"></i>5518 7329
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i>ventas@pcmig.com.mx</a>
+                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">    
@@ -19,7 +19,7 @@
                                 <a href="">
                                 <i class="fas fa-phone"></i>5518 7329
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i>ventas@pcmig.com.mx</a>
+                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">     
@@ -28,7 +28,7 @@
                                 <a href="">
                                 <i class="fas fa-phone"></i>5518 7329
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i>ventas@pcmig.com.mx</a>
+                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                                     <div class="redes">
                                         <a href=""><i class="fab fa-twitter"></i></a>
                                         <a href=""><i class="fab fa-facebook-f"></i></a>
-                                        <a href=""><i class="fab fa-whatsapp"></i></a>
+                                        <a href="https://api.whatsapp.com/send?phone=+5215584399797" target="_blank"><i class="fab fa-whatsapp"></i></a>
                                         <a href=""><i class="fab fa-instagram"></i></a>
                                     </div>
                                 </div>                   

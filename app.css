@@ -491,6 +491,9 @@ footer .container .row div .con-suc a i {
   color: #fff;
   margin-right: 10px;
 }
+footer .container .row div .con-suc a img {
+  width: 35%;
+}
 footer .container .row div .con-suc span {
   margin: 20px 0px;
 }
