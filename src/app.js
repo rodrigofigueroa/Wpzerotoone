@@ -306,29 +306,33 @@ window.addEventListener('load', () => {
     }
     bars.addEventListener('click', menuResponsive);
     shadow.addEventListener('click', menuResponsive);
-
-    if(document.querySelector('#customer_details')){
-        changeBootstrap()
-        RemoveCol()
-    }
-    if(document.querySelector('.login')){
-        loginFunction();
-    }
-    if(document.querySelector('.lost_reset_password')){
-        ResetPassword()
-    }
-    if(document.querySelector('.woocommerce-EditAccountForm')){
-        EditAccountInputs();
-    }
     if(document.querySelector('#form-contact-footer')){
         ValidateFormCompetely()
     }
     if(document.querySelector('.register')){
         btn = document.querySelector('.woocommerce-form-register').querySelector('button[type="submit"]');
         btn.disabled = true
-        AddFormControlAndBesUXregister()
         ValidateForRegister()
     }
     //   
 //End
+});
+
+window.addEventListener('DOMContentLoaded',() => {
+    if(document.querySelector('#customer_details')){
+        changeBootstrap();
+        RemoveCol();
+    }
+    if(document.querySelector('.login')){
+        loginFunction();
+    }
+    if(document.querySelector('.lost_reset_password')){
+        ResetPassword();
+    }
+    if(document.querySelector('.woocommerce-EditAccountForm')){
+        EditAccountInputs();
+    }
+    if(document.querySelector('.register')){
+        AddFormControlAndBesUXregister();
+    }
 });

@@ -425,6 +425,19 @@ window.addEventListener('load', function () {
   bars.addEventListener('click', menuResponsive);
   shadow.addEventListener('click', menuResponsive);
 
+  if (document.querySelector('#form-contact-footer')) {
+    ValidateFormCompetely();
+  }
+
+  if (document.querySelector('.register')) {
+    btn = document.querySelector('.woocommerce-form-register').querySelector('button[type="submit"]');
+    btn.disabled = true;
+    ValidateForRegister();
+  } //   
+  //End
+
+});
+window.addEventListener('DOMContentLoaded', function () {
   if (document.querySelector('#customer_details')) {
     changeBootstrap();
     RemoveCol();
@@ -442,18 +455,9 @@ window.addEventListener('load', function () {
     EditAccountInputs();
   }
 
-  if (document.querySelector('#form-contact-footer')) {
-    ValidateFormCompetely();
-  }
-
   if (document.querySelector('.register')) {
-    btn = document.querySelector('.woocommerce-form-register').querySelector('button[type="submit"]');
-    btn.disabled = true;
     AddFormControlAndBesUXregister();
-    ValidateForRegister();
-  } //   
-  //End
-
+  }
 });
 
 /***/ }),
