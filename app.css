@@ -1022,22 +1022,9 @@ footer .container .row div .txt-form-alerts {
   flex-direction: column;
   text-align: center;
   border: 1px solid #000;
-  display: block;
-  width: auto;
-  padding: 20px 10px;
-  margin: 10px;
-  background: transparent;
-  display: block;
-  text-align: center;
-  font-size: 20px;
-  font-weight: 700;
-  border: 1px solid #000;
-  border-radius: 5px;
-  color: #000;
-  transition: 0.3s all ease;
-  text-decoration: none;
-  cursor: pointer;
-  height: 300px;
+  height: 230px;
+  transition: 0.5s all ease;
+  padding: 10px 20px;
 }
 .que-hacemos .container .row div div:hover {
   background: #000;
@@ -1045,7 +1032,24 @@ footer .container .row div .txt-form-alerts {
 }
 .que-hacemos .container .row div div span {
   text-align: center;
+  font-size: 40px;
 }
 .que-hacemos .container .row div div h3 {
   font-size: 18px;
+}
+
+.acerca .container .row div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.acerca .container .row div span {
+  font-size: 18px;
+}
+.acerca .container .row div h2 {
+  font-size: 28px;
+}
+.acerca .container .row div p {
+  font-size: 20px;
 }

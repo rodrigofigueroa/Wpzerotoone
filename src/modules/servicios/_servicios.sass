@@ -11,10 +11,29 @@
                     align-items: center
                     flex-direction: column
                     text-align: center
-                    border: 1px solid $b                    
-                    @include buttonHover(auto, $b, $w, 20px 10px , 10px, 5px, .3s all ease)
-                    height: 300px
+                    border: 1px solid $b                                        
+                    height: 230px
+                    transition: .5s all ease
+                    padding: 10px 20px
+                    &:hover
+                        background: $b
+                        color: $w
                     span
                         text-align: center
+                        font-size: 40px
                     h3
                         font-size: 18px
+.acerca
+    .container
+        .row
+            div
+                display: flex
+                justify-content: center
+                align-items: flex-start
+                flex-direction: column
+                span
+                    font-size: 18px
+                h2
+                    font-size: 28px
+                p
+                    font-size: 20px
