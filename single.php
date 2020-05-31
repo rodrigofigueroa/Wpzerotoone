@@ -6,7 +6,7 @@
                 <div class="col-12 order-1">                
                     <?php if(has_post_thumbnail()):?>
                        <a href="<?php the_permalink();?>">
-                            <img src="<?php the_post_thumbnail_url('post_image');?>" alt="" srcset=""></a>
+                            <img src="<?php the_post_thumbnail_url('post_image');?>" alt="imagen destacada nettbyte" srcset=""></a>
                     <?php endif;?>
                 </div>
                         

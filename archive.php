@@ -14,7 +14,7 @@
                         <div class="card">
                             <?php if(has_post_thumbnail()):?>
                                 <a href="<?php the_permalink();?>">
-                                    <img src="<?php the_post_thumbnail_url('post_image');?>" alt="" srcset="" class="card-img-top">
+                                    <img src="<?php the_post_thumbnail_url('post_image');?>" alt="nettbyte imagen blog " srcset="" class="card-img-top">
                                 </a>
                             <?php endif;?>
                     

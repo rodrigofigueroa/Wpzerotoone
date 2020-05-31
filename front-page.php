@@ -4,7 +4,7 @@
     <div class="container">
         <h2>Bienvenido a Nettbyte</h2>
         <p>Encuentra lo que necesitas</p>
-        <a href="<?php echo get_site_url().'/tienda';?>" class="btn-primary-theme">¡Compra!</a>
+        <a id="comprabtn" href="<?php echo get_site_url().'/tienda';?>" class="btn-primary-theme">¡Compra!</a>
     </div>
 </div>
 

@@ -6,29 +6,29 @@
                             <h2>Sucursales</h2>
                             <div class="con-suc">        
                                 <h3>Iztapalapa</h3>                    
-                                <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p>
-                                <a href="">
-                                    <i class="fas fa-phone"></i>5518 7329
+                                <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
+                                <a >
+                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">    
                                 <h3>Estado de México</h3>                    
-                                <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p>
-                                <a href="">
-                                <i class="fas fa-phone"></i>5518 7329
+                                <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
+                                <a>
+                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">     
                                 <h3>Azcapotzalco</h3>                    
-                                <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p>
-                                <a href="">
-                                <i class="fas fa-phone"></i>5518 7329
+                                <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
+                                <a>
+                                <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
                                 </a>
-                                <a href="" class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>"></img></a>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
                                 <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
                             </div>
                         </div>
@@ -44,10 +44,10 @@
                                 <div class="con-redes">
                                     <h2>Redes sociales</h2>
                                     <div class="redes">
-                                        <a href=""><i class="fab fa-twitter"></i></a>
-                                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                                        <!-- <a href=""><i class="fab fa-twitter"></i></a> -->
+                                        <a href="https://www.facebook.com/Nettbyte-110300546983772"><i class="fab fa-facebook-f"></i></a>
                                         <a href="https://api.whatsapp.com/send?phone=+5215584399797" target="_blank"><i class="fab fa-whatsapp"></i></a>
-                                        <a href=""><i class="fab fa-instagram"></i></a>
+                                        <!-- <a href=""><i class="fab fa-instagram"></i></a> -->
                                     </div>
                                 </div>                   
 

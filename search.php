@@ -23,7 +23,7 @@
                                                             <div class="card mt-4 mb-4 ">
                                                                 <div class="row no-gutters">
                                                                     <div class="col-md-5">
-                                                                        <img src="<?php the_post_thumbnail_url('post_image');?>" alt="" srcset="" class="card-img-top">
+                                                                        <img src="<?php the_post_thumbnail_url('post_image');?>" alt="buscador nettbyte" srcset="" class="card-img-top">
                                                                     </div>
                                                                     <div class="col-md-7">
                                                                         <div class="card-body">                            

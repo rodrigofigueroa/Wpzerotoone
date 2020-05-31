@@ -287,6 +287,39 @@ const ValidateForRegister = () => {
     document.querySelector('.woocommerce-form-register').addEventListener('focusout', CompleteValidate)
 }
 
+const ContactSmooth = () => {
+    let fiveYearsSec = document.querySelector('.one-s'),
+        fiveYearsh2  = fiveYearsSec.getElementsByTagName('h2')[0],
+        contactSec   = document.querySelector('.three-s'),
+        contacth2    = contactSec.getElementsByTagName('h2')[0],
+        allBtn       = [fiveYearsh2, contacth2],
+        footerSec    = document.querySelector('footer'),        
+        Services     = document.querySelector('.two-s'),
+        allSecs      = [Services, footerSec],
+        btnUp        = document.querySelector('#btn-up'),
+        TopSec       = allSecs[0].getBoundingClientRect().top;
+
+        allBtn.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                let topOff = window.pageYOffset + allSecs[index].getBoundingClientRect().top;
+                    window.scrollTo({
+                        top: topOff,
+                        behavior: 'smooth'
+                    })
+            })
+        })
+        window.addEventListener('scroll', () => {
+            let windowYScroll = window.pageYOffset;
+            if(windowYScroll >= TopSec){
+                btnUp.classList.add('active')
+            }else{
+                btnUp.classList.remove('active')
+            }
+        })
+        btnUp.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth'}))
+        
+}
+
 //start the web site
 window.addEventListener('load', () => {
     const bars = document.querySelector('.fa-bars');
@@ -313,6 +346,10 @@ window.addEventListener('load', () => {
         btn = document.querySelector('.woocommerce-form-register').querySelector('button[type="submit"]');
         btn.disabled = true
         ValidateForRegister()
+    }
+
+    if(document.querySelector('.one-s')){
+        ContactSmooth();
     }
     //   
 //End
