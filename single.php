@@ -2,6 +2,13 @@
 
     <div class="post-blog">
         <div class="container">
+            <div class="row">
+                <div class="col-12" id="gogAd">
+
+                </div>
+            </div>
+        </div>
+        <div class="container">
             <div class="row d-flex justify-content-center">
                 <div class="col-12 order-1">                
                     <?php if(has_post_thumbnail()):?>
@@ -30,6 +37,13 @@
                         <?php get_sidebar();?>
                     </section>
                     <?php  dynamic_sidebar('blog-sidebar');?>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12" id="fotgogAd">
+                        
                 </div>
             </div>
         </div>

@@ -8,28 +8,28 @@
                                 <h3>Iztapalapa</h3>                    
                                 <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
                                 <a >
-                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
+                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte para contactanos">
                                 </a>
-                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
-                                <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/contacto.png'?>" alt="imagen de información de Nettbyte contacto"></img></a>
+                                <span>Horario: Lunes – Sábado: 10:00-17:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">    
                                 <h3>Estado de México</h3>                    
                                 <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
                                 <a>
-                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
+                                    <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte para contactanos">
                                 </a>
-                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
-                                <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/contacto.png'?>" alt="imagen de información de Nettbyte contacto"></img></a>
+                                <span>Horario: Lunes – Sábado: 10:00-17:00 <br />Domingo: cerrado</span>
                             </div>
                             <div class="con-suc">     
                                 <h3>Azcapotzalco</h3>                    
                                 <!-- <p>CMIG, República del Salvador 12, loc 4 Planta Alta , Col. Centro, Del. Cuauhtémoc CDMX</p> -->
                                 <a>
-                                <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte">
+                                <i class="fas fa-phone"></i><img class="mr-3" src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/number.png' ?>" alt="numero Nettbyte para contactanos">
                                 </a>
-                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/text.png'?>" alt="imagen de información"></img></a>
-                                <span>Horario: Lunes – Sábado: 10:00-19:00 <br />Domingo: cerrado</span>
+                                <a class=""><i class="fas fa-envelope"></i><img src="<?php echo get_site_url().'/wp-content/themes/woocomercetheme/images/contacto.png'?>" alt="imagen de información de Nettbyte contacto"></img></a>
+                                <span>Horario: Lunes – Sábado: 10:00-17:00 <br />Domingo: cerrado</span>
                             </div>
                         </div>
                         <div class="col-md-4"> 
