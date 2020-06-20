@@ -39,10 +39,10 @@
             $errores = 'Algo salio mal vuelve a intentarlo';
         }
         if(!$errores){
-            $enviarA = "desarrollo274@gmail.com";
+            $enviarA = "contacto@nettbyte.com.mx";
             $asunto = 'Detalles de algun posible cliente';
             $mensaje_p = "de: " . $nombre . "<br>";
-            // $mensaje_p .= "Correo " . $email . "\n";
+            $mensaje_p .= "Correo " . $email . "\n";
             $mensaje_p .= "Numero :" . $numero . "<br>";
             $mensaje_p .= "Mensaje :" . $mensaje . "<br>";
             echo true;
@@ -50,20 +50,20 @@
                 //Server settings
                 $mail->SMTPDebug = 0;                                       // Enable verbose debug output
                 $mail->isSMTP();                                            // Set mailer to use SMTP
-                $mail->Host       = 'smtp.mailbox.org';  // Specify main and backup SMTP servers
+                $mail->Host       = 'br00.hostgator.com';  // Specify main and backup SMTP servers
                 $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
-                $mail->Username   = 'contactoweb@mailbox.org';                     // SMTP username
-                $mail->Password   = '2_3q5065143GNUd';                               // SMTP password
+                $mail->Username   = 'contacto@nettbyte.com.mx';                     // SMTP username
+                $mail->Password   = '*1Nuevo*';                               // SMTP password
                 $mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
                 $mail->Port       = 587;                                    // TCP port to connect to
 
                 //Recipients
-                $mail->setFrom('contactoweb@mailbox.org', 'Mailer');
-                $mail->addAddress('desarrollo274@gmail.com', 'Joe User');     // Add a recipient
+                $mail->setFrom($email, 'Mailer');
+                $mail->addAddress($enviarA, 'Joe User');     // Add a recipient
                 // $mail->addAddress('ellen@example.com');               // Name is optional
                 // $mail->addReplyTo('info@example.com', 'Information');
-                $mail->addCC('cc@example.com');
-                $mail->addBCC('bcc@example.com');
+                // $mail->addCC('cc@example.com');
+                // $mail->addBCC('bcc@example.com');
 
                 // Content
                 $mail->isHTML(true);                                  // Set email format to HTML
